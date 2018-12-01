@@ -6,7 +6,10 @@ public class Features {
     private FeatureEvaluation parking;
     private FeatureEvaluation automaticDoor;
 
-    public Features(FeatureEvaluation ramp, FeatureEvaluation elevator, FeatureEvaluation parking, FeatureEvaluation automaticDoor, FeatureEvaluation seating, FeatureEvaluation washrooms, FeatureEvaluation otherNotes) {
+    public Features(FeatureEvaluation ramp, FeatureEvaluation elevator,
+                    FeatureEvaluation parking, FeatureEvaluation automaticDoor,
+                    FeatureEvaluation seating, FeatureEvaluation washrooms,
+                    FeatureEvaluation otherNotes) {
         this.ramp = ramp;
         this.elevator = elevator;
         this.parking = parking;
