@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "859982370147",
+    "firebase_url": "https://hackcessibility-1543693842696.firebaseio.com",
+    "project_id": "hackcessibility-1543693842696",
+    "storage_bucket": "hackcessibility-1543693842696.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:859982370147:android:cd99099cf1151759",
+        "android_client_info": {
+          "package_name": "com.mlh2018.hackcessibility"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "859982370147-pl5rt4os87e2n0d4jcgvbn47v5e95939.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAlVoTnxGrh5CrD17JzkQQa7Y5M9DNaETE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
