@@ -16,10 +16,13 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
-
+    private DatabaseReference mDatabase;
+// ...
 
     private GoogleMap mMap;
 
@@ -31,6 +34,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+        mDatabase = FirebaseDatabase.getInstance().getReference();
+        Intent placeSelectedIntent = new Intent(MapsActivity.this, AddActivity.class);
+        startActivity(placeSelectedIntent);
 
         // dealing with typing places into search bar and searching for a place
 
@@ -41,7 +47,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             public void onPlaceSelected(Place place) {
                 // TODO: Get info about the selected place.
                 Log.i("MAPS", "Place selected: " + place.getName());
-                Intent placeSelectedIntent = new Intent(MapsActivity.this, PublicSpaceActivity.class);
+                Intent placeSelectedIntent = new Intent(MapsActivity.this, AddActivity.class);
                 placeSelectedIntent.putExtra("selectedPlaceName", place.getName());
                 startActivity(placeSelectedIntent);
             }
