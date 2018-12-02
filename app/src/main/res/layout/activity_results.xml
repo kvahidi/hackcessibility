@@ -6,4 +6,62 @@
     android:layout_height="match_parent"
     tools:context=".ResultsActivity">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/ramp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ramp"
+            android:textSize="@string/textSize"
+            />
+
+        <TextView
+            android:id="@+id/elevator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/elevator"
+            android:textSize="@string/textSize"/>
+
+        <TextView
+            android:id="@+id/doors"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/automatic_doors"
+            android:textSize="@string/textSize" />
+
+        <TextView
+            android:id="@+id/parking"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/handicapped_parking"
+            android:textSize="@string/textSize"/>
+
+        <TextView
+            android:id="@+id/seating"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/accessible_seating"
+            android:textSize="@string/textSize"/>
+
+        <TextView
+            android:id="@+id/washrooms"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/accessible_washrooms"
+            android:textSize="@string/textSize"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+        </ScrollView>
+    </LinearLayout>
 </android.support.constraint.ConstraintLayout>
