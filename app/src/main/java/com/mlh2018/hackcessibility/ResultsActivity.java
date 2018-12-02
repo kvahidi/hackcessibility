@@ -159,7 +159,7 @@ public class ResultsActivity extends AppCompatActivity {
             LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams
                     (LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
             ratingBar.setLayoutParams(layoutParams);
-
+            ratingBar.setIsIndicator(true);
             slot.addView(ratingBar);
         }
 
