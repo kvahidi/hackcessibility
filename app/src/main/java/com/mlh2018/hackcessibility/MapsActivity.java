@@ -2,6 +2,7 @@ package com.mlh2018.hackcessibility;
 
 import android.Manifest;
 import android.content.Intent;
+import android.location.Location;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
@@ -22,6 +23,8 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.ArrayList;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
@@ -89,8 +92,25 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap = googleMap;
 
         // Add a marker in Sydney and move the camera
-        LatLng sydney = new LatLng(-34, 151);
-        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+        /**/
+        GPStracker g = new GPStracker(getApplicationContext());
+        Location l = g.getLocation();
+        System.out.println(l);
+        double lat = 0;
+        double lon = 0;
+        if (l != null) {
+            lat = l.getLatitude();
+            lon = l.getLongitude();
+            // Toast.makeText(getApplicationContext(), "LAT: "+lat+"\n LON: "+lon, Toast.LENGTH_LONG).show();
+        }
+
+        LatLng currLoc = new LatLng(lat,lon);
+        mMap.addMarker(new MarkerOptions().position(currLoc).title("Your location!"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(currLoc, 17.0f));
+        try {
+            ArrayList<Incident> sdjf = DatabaseHandler.getListOfIncidentsFromDatabase();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }

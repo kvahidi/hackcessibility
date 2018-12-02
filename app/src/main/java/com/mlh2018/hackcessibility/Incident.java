@@ -9,11 +9,11 @@ public class Incident {
     public String id;
     public String description;
     public String picture;
-    public Date updatedTimestamp;
+    public String updatedTimestamp;
 
     public  Incident(){}
 
-    public Incident(String id, double longitude, double latitude, String description, String picture, Date updatedTimestamp){
+    public Incident(String id, double longitude, double latitude, String description, String picture, String updatedTimestamp){
         this.description=description;
         this.longitude=longitude;
         this.latitude=latitude;

@@ -17,6 +17,8 @@ import java.sql.Date;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Iterator;
 import java.util.concurrent.ExecutionException;
 
@@ -42,14 +44,12 @@ public class DatabaseHandler {
                                 Double.parseDouble(obj.get("latitude").toString()) ,
                                 obj.get("description").toString(),
                                 obj.get("picture").toString(),
-                                new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse(obj.get("updatedTimeStamp").toString()));
+                                obj.get("updatedTimestamp").toString());
                          inc.id = "" + inc.hashCode();
                          return inc;
                     }
                 }
             } catch (JSONException e) {
-                e.printStackTrace();
-            } catch (ParseException e) {
                 e.printStackTrace();
             }
         } catch (InterruptedException e) {
@@ -58,6 +58,43 @@ public class DatabaseHandler {
             e.printStackTrace();
         }
         throw new Exception("Could not get incident data from database");
+    }
+
+    public static ArrayList<Incident> getListOfIncidentsFromDatabase() throws Exception {
+        String urlString = dbURL + "Incidents.json";
+        ArrayList<Incident> listOfIncidents = new ArrayList<>();
+        AsyncTask<String, Void, String> getRequest = new GetClient().execute(urlString);
+        try {
+            String result = getRequest.get();
+            try {
+                JSONObject object = new JSONObject(result);
+                Iterator<String> iterator = object.keys();
+                while (iterator.hasNext()) {
+                    JSONObject obj = object.getJSONObject(iterator.next());
+                    if (obj.has("description")){
+
+                        Incident inc = new Incident("0",
+                                Double.parseDouble(obj.get("longitude").toString()),
+                                Double.parseDouble(obj.get("latitude").toString()) ,
+                                obj.get("description").toString(),
+                                obj.get("picture").toString(),
+                                obj.get("updatedTimestamp").toString());
+                        inc.id = "" + inc.hashCode();
+                        listOfIncidents.add(inc);
+                    }
+                }
+            } catch (JSONException e) {
+                e.printStackTrace();
+            } /*catch (ParseException e) {
+                e.printStackTrace();
+            }*/
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        }
+
+        return listOfIncidents;
     }
 
     public  static void deleteIncidentFromDatabase(Incident incident){
