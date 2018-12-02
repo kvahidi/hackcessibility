@@ -42,9 +42,10 @@
             android:name=".PublicSpaceActivity"
             android:label="@string/title_activity_public_space"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".ResultsActivity"></activity>
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".AddActivity"></activity>
+        <activity android:name=".ResultsActivity" />
+        android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".AddActivity" />
+        <activity android:name=".IncidentReportActivity"></activity>
     </application>
 
 </manifest>
