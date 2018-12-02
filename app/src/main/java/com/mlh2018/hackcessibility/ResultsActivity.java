@@ -1,16 +1,13 @@
 package com.mlh2018.hackcessibility;
 
-import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
+import android.os.Bundle;
 
-public class PublicSpaceActivity extends AppCompatActivity {
+public class ResultsActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_public_space);
-
+        setContentView(R.layout.activity_results);
     }
-
 }
