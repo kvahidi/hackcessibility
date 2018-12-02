@@ -1,8 +1,14 @@
 package com.mlh2018.hackcessibility;
 
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.RatingBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.mlh2018.data_structures.AccessiblePlace;
 import com.mlh2018.data_structures.Evaluation;
@@ -12,6 +18,7 @@ import com.mlh2018.data_structures.Features;
 import java.util.ArrayList;
 
 public class ResultsActivity extends AppCompatActivity {
+
 
     AccessiblePlace thePlace;
     @Override
@@ -23,29 +30,55 @@ public class ResultsActivity extends AppCompatActivity {
     }
 
     private void updateList() {
-        TextView ramp = findViewById(R.id.ramp);
-        TextView elevator = findViewById(R.id.elevator);
-        TextView doors = findViewById(R.id.doors);
-        TextView parking = findViewById(R.id.parking);
-        TextView seating = findViewById(R.id.seating);
-        TextView washrooms = findViewById(R.id.washrooms);
+        LinearLayout ramp = findViewById(R.id.ramp_layout);
+        LinearLayout elevator = findViewById(R.id.elevator_layout);
+        LinearLayout doors = findViewById(R.id.doors_layout);
+        LinearLayout parking = findViewById(R.id.parking_layout);
+        LinearLayout seating = findViewById(R.id.seating_layout);
+        LinearLayout washrooms = findViewById(R.id.washrooms_layout);
 
-        String rampData = getRampData();
-        String elevatorData = getElevatorData();
+        updateData(ramp);
+
     }
 
-    private String getRampData() {
+    private void updateData(LinearLayout slot) {
+        int goods=0;
+        int bads=0;
+        int nones=0;
         for (Features features: thePlace.getFeatures()){
+            if(features.getRamp().getEvaluation()==Evaluation.GOOD){
+                goods++;
+            }if(features.getRamp().getEvaluation()==Evaluation.BAD){
+                bads++;
+            }if(features.getRamp().getEvaluation()==Evaluation.NOT_HERE){
+                nones++;
+            }
+        }
+        if ( ((nones + bads) >= goods) && (bads < nones) ){
+            //ToDo other none
+        }else {
+            //slot
+            RatingBar bar = new RatingBar(this);
+            bar.setNumStars(5);
 
         }
 
-
-        return "0";
     }
 
     private String getElevatorData() {
         return "0";
 
+    }
+
+
+    private void look(){
+        LinearLayout ll = (LinearLayout)findViewById(R.id.ramp_layout);
+
+        Button btn = new Button(this);
+        btn.setText("Manual Add");
+        btn.setLayoutParams(new LinearLayout.LayoutParams
+                (LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
+        ll.addView(btn);
     }
 
     // TODO get rid of garbage Data

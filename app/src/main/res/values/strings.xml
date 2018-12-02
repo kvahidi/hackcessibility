@@ -3,11 +3,22 @@
     <string name="title_activity_maps">Map</string>
     <string name="google_maps_api_key">AIzaSyD5ECGarTe0ejlO5qsO44vLyXm1Spu2FPE</string>
     <string name="title_activity_public_space">PublicSpaceActivity</string>
+    <string name="ramp">Ramp</string>
+    <string name="elevator">Elevator</string>
+    <string name="automatic_doors">Automatic Doors</string>
+    <string name="handicapped_parking">Handicapped Parking</string>
+    <string name="accessible_seating">Accessible Seating</string>
+    <string name="accessible_washrooms">Accessible Washrooms</string>
+    <string name="textSize">25sp</string>
+</resources>
+<!--
+
     <string name="ramp">Ramp \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</string>
     <string name="elevator">Elevator \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</string>
     <string name="automatic_doors">Automatic Doors \t\t\t\t\t\t\t\t</string>
     <string name="handicapped_parking">Handicapped Parking \t\t\t</string>
     <string name="accessible_seating">Accessible Seating \t\t\t\t\t\t</string>
     <string name="accessible_washrooms">Accessible Washrooms \t</string>
-    <string name="textSize">25sp</string>
-</resources>
+
+-->
+

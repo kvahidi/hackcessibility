@@ -11,48 +11,89 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/ramp"
+        <LinearLayout
+            android:id="@+id/ramp_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/ramp"
-            android:textSize="@string/textSize"
-            />
+            android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/elevator"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/elevator"
-            android:textSize="@string/textSize"/>
+            <TextView
+                android:id="@+id/ramp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/ramp"
+                android:textSize="@string/textSize" />
+        </LinearLayout>
 
-        <TextView
-            android:id="@+id/doors"
+        <LinearLayout
+            android:id="@+id/elevator_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/automatic_doors"
-            android:textSize="@string/textSize" />
+            android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/parking"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/handicapped_parking"
-            android:textSize="@string/textSize"/>
+            <TextView
+                android:id="@+id/elevator"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/elevator"
+                android:textSize="@string/textSize" />
+        </LinearLayout>
 
-        <TextView
-            android:id="@+id/seating"
+        <LinearLayout
+            android:id="@+id/doors_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/accessible_seating"
-            android:textSize="@string/textSize"/>
+            android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/washrooms"
+            <TextView
+                android:id="@+id/doors"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/automatic_doors"
+                android:textSize="@string/textSize" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/parking_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/accessible_washrooms"
-            android:textSize="@string/textSize"/>
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/parking"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/handicapped_parking"
+                android:textSize="@string/textSize" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/seating_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/seating"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/accessible_seating"
+                android:textSize="@string/textSize" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/washrooms_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/washrooms"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/accessible_washrooms"
+                android:textSize="@string/textSize" />
+        </LinearLayout>
 
         <ScrollView
             android:layout_width="match_parent"
