@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class IncidentReportActivity extends AppCompatActivity {
 
@@ -37,6 +38,8 @@ public class IncidentReportActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 ///TODO //delete from DB
+                Toast.makeText(getApplicationContext(),"Thank you for resolving!", Toast.LENGTH_LONG).show();
+                finish();
             }
         });
         Button stillAnIssueBtn = findViewById(R.id.stillIssueBtn);
@@ -44,6 +47,8 @@ public class IncidentReportActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 /// TODO update DB
+                Toast.makeText(getApplicationContext(), "Thank you for updating our database!", Toast.LENGTH_LONG).show();
+                finish();
             }
         });
     }
