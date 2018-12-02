@@ -20,6 +20,7 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -108,7 +109,15 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.addMarker(new MarkerOptions().position(currLoc).title("Your location!"));
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(currLoc, 17.0f));
         try {
-            ArrayList<Incident> sdjf = DatabaseHandler.getListOfIncidentsFromDatabase();
+            ArrayList<Marker> markers= new ArrayList<Marker>();
+            ArrayList<Incident> incidents = DatabaseHandler.getListOfIncidentsFromDatabase();
+            for (Incident i: incidents) {
+                lat = i.latitude;
+                lon = i.longitude;
+                LatLng incLoc = new LatLng(lat,lon);
+                MarkerOptions marker = new MarkerOptions().position(incLoc).title("Incident location!");
+                mMap.addMarker(marker);
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }
