@@ -45,7 +45,8 @@
         <activity android:name=".ResultsActivity" />
         android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".AddActivity" />
-        <activity android:name=".IncidentReportActivity"></activity>
+        <activity android:name=".IncidentReportActivity" />
+        <activity android:name=".AddIncidentReportActivity"></activity>
     </application>
 
 </manifest>

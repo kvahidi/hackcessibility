@@ -60,6 +60,19 @@ public class DatabaseHandler {
         throw new Exception("Could not get incident data from database");
     }
 
+    public  static void deleteIncidentFromDatabase(Incident incident){
+        DatabaseReference mDatabase;
+// ...
+        mDatabase = FirebaseDatabase.getInstance().getReference("Incidents");
+        mDatabase.child(incident.id).removeValue();
+    }
+
+    public static void updateIncidentFromDatabase(Incident incident){
+        DatabaseReference mDatabase;
+// ...
+        mDatabase = FirebaseDatabase.getInstance().getReference("Incidents");
+        mDatabase.child(incident.id).setValue("updatedTimestamp", new SimpleDateFormat("yyyy-MM-dd HH:mm:ss"));
+    }
     public static void addIncidentToDatabase(Incident incident){
          DatabaseReference mDatabase;
 // ...

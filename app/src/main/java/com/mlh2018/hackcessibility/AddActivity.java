@@ -12,7 +12,7 @@ public class AddActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add);
-
+// todo add listeners for two btns
     }
 
     private void writeNewIncident(Incident incident){
