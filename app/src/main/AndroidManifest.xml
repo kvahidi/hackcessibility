@@ -43,6 +43,8 @@
             android:label="@string/title_activity_public_space"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".ResultsActivity"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".AddActivity"></activity>
     </application>
 
 </manifest>
