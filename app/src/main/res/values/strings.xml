@@ -17,8 +17,7 @@
     <string name="add_review">Add Review</string>
     <string name="what_would_you_like_to_add">What would you like to add?</string>
     <string name="add_incident">Add Incident</string>
-</resources>
-<!--
+</resources><!--
 
     <string name="ramp">Ramp \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</string>
     <string name="elevator">Elevator \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</string>

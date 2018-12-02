@@ -24,6 +24,15 @@ public class AddActivity extends AppCompatActivity {
                 finish();
             }
         });
+
+        Button addReviewBtn = findViewById(R.id.addreviewbtn);
+        addReviewBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(AddActivity.this, RatePlace.class));
+                finish();
+            }
+        });
     }
 
     private void writeNewIncident(Incident incident){
