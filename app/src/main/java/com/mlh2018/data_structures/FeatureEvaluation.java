@@ -4,12 +4,12 @@ public class FeatureEvaluation {
     // values
     private String feature;
     private Evaluation evaluation;
-    FeatureEvaluation(String feature, Evaluation eval){
+    public FeatureEvaluation(String feature, Evaluation eval){
         this.feature=feature;
         this.evaluation=eval;
     }
 
-    FeatureEvaluation(String feature){
+    public FeatureEvaluation(String feature){
         this.feature=feature;
         this.evaluation=Evaluation.NO_DATA;
     }
