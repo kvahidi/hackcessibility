@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".IncidentReportActivity">
+
+    <TextView
+        android:id="@+id/incidentDescription"
+        android:layout_width="311dp"
+        android:layout_height="121dp"
+        tools:layout_editor_absoluteX="31dp"
+        tools:layout_editor_absoluteY="205dp" />
+
+    <Button
+        android:id="@+id/exitIncidentBtn"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:text="Exit"
+        tools:layout_editor_absoluteX="31dp"
+        tools:layout_editor_absoluteY="366dp" />
+
+    <Button
+        android:id="@+id/resolvedBtn"
+        android:layout_width="167dp"
+        android:layout_height="wrap_content"
+        android:text="Mark as resolved"
+        tools:layout_editor_absoluteX="183dp"
+        tools:layout_editor_absoluteY="365dp" />
+
+    <Button
+        android:id="@+id/stillIssueBtn"
+        android:layout_width="325dp"
+        android:layout_height="wrap_content"
+        android:text="Mark this incident as still active"
+        tools:layout_editor_absoluteX="25dp"
+        tools:layout_editor_absoluteY="429dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="305dp"
+        android:layout_height="156dp"
+        app:srcCompat="@android:drawable/stat_sys_warning"
+        tools:layout_editor_absoluteX="31dp"
+        tools:layout_editor_absoluteY="34dp" />
+</android.support.constraint.ConstraintLayout>

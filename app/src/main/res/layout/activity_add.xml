@@ -6,4 +6,27 @@
     android:layout_height="match_parent"
     tools:context=".AddActivity">
 
+    <TextView
+        android:id="@+id/texv"
+        android:layout_width="254dp"
+        android:layout_height="61dp"
+        android:text="What would you like to add?"
+        tools:layout_editor_absoluteX="52dp"
+        tools:layout_editor_absoluteY="98dp" />
+
+    <Button
+        android:id="@+id/addreviewbtn"
+        android:layout_width="148dp"
+        android:layout_height="wrap_content"
+        android:text="Add Review"
+        tools:layout_editor_absoluteX="29dp"
+        tools:layout_editor_absoluteY="194dp" />
+
+    <Button
+        android:id="@+id/addincidentbtn"
+        android:layout_width="138dp"
+        android:layout_height="wrap_content"
+        android:text="Add Incident"
+        tools:layout_editor_absoluteX="188dp"
+        tools:layout_editor_absoluteY="194dp" />
 </android.support.constraint.ConstraintLayout>
