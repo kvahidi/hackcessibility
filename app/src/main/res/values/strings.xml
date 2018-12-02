@@ -11,6 +11,12 @@
     <string name="accessible_washrooms">Accessible Washrooms</string>
     <string name="textSize">25sp</string>
     <string name="none">NONE</string>
+    <string name="submit">Submit</string>
+    <string name="describe_the_situation">Describe the situation.</string>
+    <string name="upload_a_photo">upload A Photo</string>
+    <string name="add_review">Add Review</string>
+    <string name="what_would_you_like_to_add">What would you like to add?</string>
+    <string name="add_incident">Add Incident</string>
 </resources>
 <!--
 
