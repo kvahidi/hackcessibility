@@ -1,9 +1,12 @@
 package com.mlh2018.hackcessibility;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
+import android.widget.Toast;
 
 public class IncidentReportActivity extends AppCompatActivity {
 
@@ -12,6 +15,13 @@ public class IncidentReportActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_incident_report);
         setButtonListeners();
+        Intent intent = getIntent();
+        String desc, timestamp;
+        desc = intent.getStringExtra("description");
+        timestamp = intent.getStringExtra("timestamp");
+        TextView txt = findViewById(R.id.incidentDescription);
+        txt.setText(desc + "("+timestamp+")");
+
 
     }
 
@@ -28,6 +38,8 @@ public class IncidentReportActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 ///TODO //delete from DB
+                Toast.makeText(getApplicationContext(),"Thank you for resolving!", Toast.LENGTH_LONG).show();
+                finish();
             }
         });
         Button stillAnIssueBtn = findViewById(R.id.stillIssueBtn);
@@ -35,6 +47,8 @@ public class IncidentReportActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 /// TODO update DB
+                Toast.makeText(getApplicationContext(), "Thank you for updating our database!", Toast.LENGTH_LONG).show();
+                finish();
             }
         });
     }

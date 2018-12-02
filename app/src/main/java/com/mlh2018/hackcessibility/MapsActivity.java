@@ -20,23 +20,23 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
 
-public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
+public class MapsActivity extends FragmentActivity implements OnMapReadyCallback, GoogleMap.OnMarkerClickListener {
 
     private DatabaseReference mDatabase;
 // ...
 
     private GoogleMap mMap;
-
+    private ArrayList<Marker> markerList;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        markerList = new ArrayList<>();
         setContentView(R.layout.activity_maps);
         ActivityCompat.requestPermissions(MapsActivity.this, new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION,
                 Manifest.permission.ACCESS_COARSE_LOCATION}, 100);
@@ -120,6 +120,32 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             }
         } catch (Exception e) {
             e.printStackTrace();
+    }
+
+    public void initializeMarkerListeners(GoogleMap map){
+
+    }
+
+    @Override
+    public boolean onMarkerClick(Marker marker) {
+        for (Marker markerFromList:markerList
+                ) {
+            if (marker.equals(markerFromList)){
+                double markerLat = marker.getPosition().latitude;
+                double markerLon = marker.getPosition().longitude;
+                try {
+                    Incident incident = DatabaseHandler.getIncidentFromDatabase(markerLat, markerLon);
+                    Intent incidentReportIntent = new Intent(MapsActivity.this, IncidentReportActivity.class);
+                    incidentReportIntent.putExtra("description", incident.description);
+                    incidentReportIntent.putExtra("timestamp", incident.updatedTimestamp);
+                    startActivity(incidentReportIntent);
+
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+
         }
+        return false;
     }
 }
