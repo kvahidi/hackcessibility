@@ -19,11 +19,10 @@
 
             <TextView
                 android:id="@+id/ramp"
-                android:layout_width="match_parent"
+                android:layout_width="215dp"
                 android:layout_height="wrap_content"
                 android:text="@string/ramp"
-                android:textSize="25sp"
-                />
+                android:textSize="20sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -34,11 +33,10 @@
 
             <TextView
                 android:id="@+id/elevator"
-                android:layout_width="match_parent"
+                android:layout_width="215dp"
                 android:layout_height="wrap_content"
                 android:text="@string/elevator"
-                android:textSize="25sp"
-                />
+                android:textSize="20sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -49,11 +47,10 @@
 
             <TextView
                 android:id="@+id/doors"
-                android:layout_width="match_parent"
+                android:layout_width="215dp"
                 android:layout_height="wrap_content"
                 android:text="@string/automatic_doors"
-                android:textSize="25sp"
-                />
+                android:textSize="20sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -64,11 +61,10 @@
 
             <TextView
                 android:id="@+id/parking"
-                android:layout_width="match_parent"
+                android:layout_width="215dp"
                 android:layout_height="wrap_content"
                 android:text="@string/handicapped_parking"
-                android:textSize="25sp"
-                />
+                android:textSize="20sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -79,11 +75,10 @@
 
             <TextView
                 android:id="@+id/seating"
-                android:layout_width="match_parent"
+                android:layout_width="215dp"
                 android:layout_height="wrap_content"
                 android:text="@string/accessible_seating"
-                android:textSize="25sp"
-                />
+                android:textSize="20sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -94,10 +89,10 @@
 
             <TextView
                 android:id="@+id/washrooms"
-                android:layout_width="match_parent"
+                android:layout_width="215dp"
                 android:layout_height="wrap_content"
                 android:text="@string/accessible_washrooms"
-                android:textSize="25sp"
+                android:textSize="20sp"
 
                 />
         </LinearLayout>

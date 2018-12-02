@@ -10,6 +10,7 @@
     <string name="accessible_seating">Accessible Seating</string>
     <string name="accessible_washrooms">Accessible Washrooms</string>
     <string name="textSize">25sp</string>
+    <string name="none">NONE</string>
 </resources>
 <!--
 
