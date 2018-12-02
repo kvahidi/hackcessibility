@@ -22,7 +22,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/ramp"
-                android:textSize="@string/textSize" />
+                android:textSize="25sp"
+                />
         </LinearLayout>
 
         <LinearLayout
@@ -36,7 +37,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/elevator"
-                android:textSize="@string/textSize" />
+                android:textSize="25sp"
+                />
         </LinearLayout>
 
         <LinearLayout
@@ -50,7 +52,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/automatic_doors"
-                android:textSize="@string/textSize" />
+                android:textSize="25sp"
+                />
         </LinearLayout>
 
         <LinearLayout
@@ -64,7 +67,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/handicapped_parking"
-                android:textSize="@string/textSize" />
+                android:textSize="25sp"
+                />
         </LinearLayout>
 
         <LinearLayout
@@ -78,7 +82,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/accessible_seating"
-                android:textSize="@string/textSize" />
+                android:textSize="25sp"
+                />
         </LinearLayout>
 
         <LinearLayout
@@ -92,7 +97,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/accessible_washrooms"
-                android:textSize="@string/textSize" />
+                android:textSize="25sp"
+
+                />
         </LinearLayout>
 
         <ScrollView

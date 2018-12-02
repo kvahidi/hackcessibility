@@ -25,8 +25,8 @@ public class ResultsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_results);
-        thePlace=serverParser();
-        updateList();
+        //thePlace=serverParser();
+        //updateList();
     }
 
     private void updateList() {
@@ -40,6 +40,7 @@ public class ResultsActivity extends AppCompatActivity {
         updateData(ramp);
 
     }
+
 
     private void updateData(LinearLayout slot) {
         int goods=0;
@@ -64,12 +65,6 @@ public class ResultsActivity extends AppCompatActivity {
         }
 
     }
-
-    private String getElevatorData() {
-        return "0";
-
-    }
-
 
     private void look(){
         LinearLayout ll = (LinearLayout)findViewById(R.id.ramp_layout);
@@ -130,7 +125,7 @@ public class ResultsActivity extends AppCompatActivity {
     }
 
     public Features garbageData3(){
-        FeatureEvaluation ramp = new FeatureEvaluation("Ramp", Evaluation.GOOD);
+        FeatureEvaluation ramp =            new FeatureEvaluation("Ramp", Evaluation.GOOD);
         FeatureEvaluation elevator =        new FeatureEvaluation("Elevator", Evaluation.GOOD);
         FeatureEvaluation parking =         new FeatureEvaluation("Parking", Evaluation.GOOD);
         FeatureEvaluation automaticDoor =   new FeatureEvaluation ("AutomaticDoor", Evaluation.GOOD);
@@ -166,4 +161,5 @@ public class ResultsActivity extends AppCompatActivity {
         Features hi = new Features(ramp,elevator,parking,automaticDoor,seating,washrooms,otherNotes);
         return (hi);
     }
+
 }
