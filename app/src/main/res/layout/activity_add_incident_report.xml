@@ -6,29 +6,46 @@
     android:layout_height="match_parent"
     tools:context=".AddIncidentReportActivity">
 
-    <EditText
-        android:id="@+id/descripIncidentEditTxt"
-        android:layout_width="301dp"
-        android:layout_height="150dp"
-        android:ems="10"
-        android:inputType="textMultiLine"
-        android:text="Describe the situation."
-        tools:layout_editor_absoluteX="35dp"
-        tools:layout_editor_absoluteY="23dp" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="217dp"
-        android:layout_height="wrap_content"
-        android:text="upload A Photo"
-        tools:layout_editor_absoluteX="81dp"
-        tools:layout_editor_absoluteY="216dp" />
+        <Button
+            android:id="@+id/submitIncidentBtn"
+            android:layout_width="223dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="63dp"
+            android:text="@string/submit"
+            tools:layout_editor_absoluteX="81dp"
+            tools:layout_editor_absoluteY="431dp" />
 
-    <Button
-        android:id="@+id/submitIncidentBtn"
-        android:layout_width="223dp"
-        android:layout_height="wrap_content"
-        android:text="Submit"
-        tools:layout_editor_absoluteX="81dp"
-        tools:layout_editor_absoluteY="431dp" />
+        <EditText
+            android:id="@+id/descripIncidentEditTxt"
+            android:layout_width="301dp"
+            android:layout_height="150dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="54dp"
+            android:ems="10"
+            android:inputType="textMultiLine"
+            android:text="@string/describe_the_situation"
+            tools:layout_editor_absoluteX="35dp"
+            tools:layout_editor_absoluteY="23dp" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="217dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="221dp"
+            android:text="@string/upload_a_photo"
+            tools:layout_editor_absoluteX="81dp"
+            tools:layout_editor_absoluteY="216dp" />
+    </RelativeLayout>
+
 </android.support.constraint.ConstraintLayout>
