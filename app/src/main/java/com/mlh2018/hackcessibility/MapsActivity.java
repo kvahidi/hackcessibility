@@ -36,7 +36,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mapFragment.getMapAsync(this);
         mDatabase = FirebaseDatabase.getInstance().getReference();
         Incident inc = new Incident();
-        
+
         // dealing with typing places into search bar and searching for a place
 
         PlaceAutocompleteFragment autocompleteFragment = (PlaceAutocompleteFragment)
