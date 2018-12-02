@@ -35,9 +35,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
         mDatabase = FirebaseDatabase.getInstance().getReference();
-        Intent placeSelectedIntent = new Intent(MapsActivity.this, AddActivity.class);
-        startActivity(placeSelectedIntent);
-
+        Incident inc = new Incident();
+        
         // dealing with typing places into search bar and searching for a place
 
         PlaceAutocompleteFragment autocompleteFragment = (PlaceAutocompleteFragment)
@@ -47,7 +46,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             public void onPlaceSelected(Place place) {
                 // TODO: Get info about the selected place.
                 Log.i("MAPS", "Place selected: " + place.getName());
-                Intent placeSelectedIntent = new Intent(MapsActivity.this, AddActivity.class);
+                Intent placeSelectedIntent = new Intent(MapsActivity.this, PublicSpaceActivity.class);
                 placeSelectedIntent.putExtra("selectedPlaceName", place.getName());
                 startActivity(placeSelectedIntent);
             }

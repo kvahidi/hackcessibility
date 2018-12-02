@@ -12,11 +12,9 @@ public class AddActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add);
-        writeNewIncident(new Incident("1", 3, 4, "a", "d", "2018"));
 
     }
 
     private void writeNewIncident(Incident incident){
-    mDatabase.child("Incidents").child("incident" + incident.id).setValue(incident);
     }
 }
