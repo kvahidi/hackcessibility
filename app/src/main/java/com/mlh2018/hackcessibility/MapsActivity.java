@@ -61,7 +61,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             public void onPlaceSelected(Place place) {
                 // TODO: Get info about the selected place.
                 Log.i("MAPS", "Place selected: " + place.getName());
-                Intent placeSelectedIntent = new Intent(MapsActivity.this, PublicSpaceActivity.class);
+                Intent placeSelectedIntent = new Intent(MapsActivity.this, ResultsActivity.class);
                 placeSelectedIntent.putExtra("selectedPlaceName", place.getName());
                 startActivity(placeSelectedIntent);
             }
@@ -70,7 +70,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             public void onError(Status status) {
                 // TODO: Handle the error.
                 Log.i("MAPS", "An error occurred on place selected: " + status);
-                Toast.makeText(getApplicationContext(), "An error occured selecting a place :(", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "An error occurred selecting a place :(", Toast.LENGTH_LONG).show();
             }
         });
 
